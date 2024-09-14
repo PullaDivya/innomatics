@@ -1,0 +1,66 @@
+/* Center the search bar on the page */
+.search-bar-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Increased for better visibility */
+    margin: 50px auto; /* Added top margin for spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Improved input field */
+input {
+    width: 100%;
+    padding: 12px 15px; /* Added more padding for a comfortable feel */
+    border: 1px solid #ddd; /* Softer border color */
+    border-radius: 5px;
+    font-size: 16px; /* Increased font size */
+    outline: none;
+    transition: all 0.3s ease; /* Smooth transition for focus effects */
+}
+
+/* Focused input with box shadow */
+input:focus {
+    border-color: #4a90e2; /* Blue border on focus */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5); /* Add a glow effect */
+}
+
+/* Suggestion list styling */
+.suggestions-list {
+    position: absolute;
+    top: 100%; /* Position directly under the input */
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    max-height: 200px; /* Increased height */
+    overflow-y: auto;
+    z-index: 1000; /* Make sure suggestions appear above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for suggestions */
+    margin-top: 5px;
+}
+
+/* Suggestion list item styling */
+.suggestions-list li {
+    padding: 12px; /* Added padding for each suggestion */
+    cursor: pointer;
+    font-size: 16px; /* Larger text */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+    border-bottom: 1px solid #f0f0f0; /* Subtle border between items */
+}
+
+/* Last item in list without bottom border */
+.suggestions-list li:last-child {
+    border-bottom: none;
+}
+
+/* Highlight on hover */
+.suggestions-list li:hover {
+    background-color: #f9f9f9;
+    color: #4a90e2; /* Change text color on hover */
+}
+
+/* Active suggestion when clicked */
+.suggestions-list li:active {
+    background-color: #e6e6e6;
+}
